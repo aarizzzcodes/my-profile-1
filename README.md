@@ -1,6 +1,6 @@
 # ✦ Aariz — Developer Portfolio ✦
 
-Live at : 
+Live at : https://aarizzzcodes.github.io/my-profile-1/
 
 A modern, fast, and interactive personal developer portfolio built with pure HTML5, CSS3, and JavaScript.
 
