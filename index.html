@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aariz | Software Engineer & Creative Developer</title>
+  <meta name="description" content="Portfolio of Aariz — Full-Stack Engineer, IoT & Systems Developer." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Glowing Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Background Particle Constellation Canvas -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Ambient Background Glows -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-bottom-right"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-box">A</span>
+        <span class="logo-text">Aariz<span class="accent-dot">.</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#timeline" class="nav-link">Milestones</a></li>
+        <li><a href="#contact" class="nav-btn">Get In Touch</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-content">
+        <div class="status-pill">
+          <span class="pulse-dot"></span>
+          <span>Available for New Ventures & Engineering Roles</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hey, I'm <span class="gradient-text">Aariz</span>.
+        </h1>
+
+        <p class="hero-subtitle">
+          I build <span class="typewriter-text" id="typewriter"></span><span class="cursor-blink">|</span>
+        </p>
+
+        <p class="hero-description">
+          A passionate software engineer specializing in scalable full-stack applications, intelligent IoT systems, and high-performance algorithms. Turning ideas into elegant code.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            Explore Work <i data-lucide="arrow-right"></i>
+          </a>
+          <button class="btn btn-secondary" id="copyEmailBtn" data-email="aariz@example.com">
+            <i data-lucide="copy"></i> Copy Email
+          </button>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com" target="_blank" rel="noreferrer" class="social-link" title="GitHub">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-link" title="LinkedIn">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="mailto:aariz@example.com" class="social-link" title="Email Aariz">
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive About Section with Code Mockup -->
+    <section class="section-container" id="about">
+      <div class="section-header">
+        <span class="section-tag">Overview</span>
+        <h2 class="section-title">Engineering with Purpose</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card tilt-card">
+          <h3>The Narrative</h3>
+          <p>
+            I'm a computer science and electronics enthusiast who loves crafting reliable web architectures and hardware-integrated software. Whether it's writing multi-threaded algorithms, designing responsive user interfaces, or calibrating IoT microcontrollers, I focus on clean maintainability and performance.
+          </p>
+          <div class="metrics-row">
+            <div class="metric-box">
+              <span class="metric-number">20+</span>
+              <span class="metric-label">Completed Builds</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-number">99.9%</span>
+              <span class="metric-label">Precision Focused</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Problem Solver</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Terminal Card -->
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-buttons">
+              <span class="term-btn btn-red"></span>
+              <span class="term-btn btn-yellow"></span>
+              <span class="term-btn btn-green"></span>
+            </div>
+            <div class="terminal-tabs">
+              <button class="tab-btn active" data-tab="tab-dev">aariz.ts</button>
+              <button class="tab-btn" data-tab="tab-specs">specs.json</button>
+            </div>
+          </div>
+          <div class="terminal-body" id="tab-dev">
+            <pre><code><span class="c-keyword">interface</span> <span class="c-type">Engineer</span> {
+  name: <span class="c-string">"Aariz"</span>;
+  role: <span class="c-string">"Full-Stack & Systems Craftsman"</span>;
+  loves: [<span class="c-string">"Performant UIs"</span>, <span class="c-string">"Hardware IoT"</span>, <span class="c-string">"Clean Code"</span>];
+  status: <span class="c-string">"Building the future 🚀"</span>;
+}
+
+<span class="c-keyword">const</span> developer = <span class="c-keyword">new</span> <span class="c-func">Engineer</span>();
+developer.<span class="c-func">deployPassion</span>();</code></pre>
+          </div>
+          <div class="terminal-body hidden" id="tab-specs">
+            <pre><code>{
+  <span class="c-string">"architecture"</span>: <span class="c-string">"Distributed & Modular"</span>,
+  <span class="c-string">"primaryTools"</span>: [<span class="c-string">"Node.js"</span>, <span class="c-string">"Python"</span>, <span class="c-string">"C++"</span>],
+  <span class="c-string">"coffeeConsumed"</span>: <span class="c-keyword">Infinity</span>,
+  <span class="c-string">"status"</span>: <span class="c-string">"Online"</span>
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section-container" id="skills">
+      <div class="section-header">
+        <span class="section-tag">Capabilities</span>
+        <h2 class="section-title">Technical Toolbelt</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card tilt-card">
+          <div class="skill-icon-wrapper"><i data-lucide="code-2"></i></div>
+          <h3>Languages</h3>
+          <p>Writing expressive, performant code across various abstraction levels.</p>
+          <div class="tag-group">
+            <span class="badge">TypeScript</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">Python</span>
+            <span class="badge">C++</span>
+            <span class="badge">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card tilt-card">
+          <div class="skill-icon-wrapper"><i data-lucide="layout"></i></div>
+          <h3>Frontend Systems</h3>
+          <p>Modern interactive user interfaces built for responsiveness and speed.</p>
+          <div class="tag-group">
+            <span class="badge">React</span>
+            <span class="badge">HTML5/CSS3</span>
+            <span class="badge">Tailwind CSS</span>
+            <span class="badge">Vite</span>
+          </div>
+        </div>
+
+        <div class="skill-card tilt-card">
+          <div class="skill-icon-wrapper"><i data-lucide="server"></i></div>
+          <h3>Backend & Storage</h3>
+          <p>RESTful APIs, asynchronous services, and secure persistent databases.</p>
+          <div class="tag-group">
+            <span class="badge">Node.js</span>
+            <span class="badge">Express</span>
+            <span class="badge">PostgreSQL</span>
+            <span class="badge">MongoDB</span>
+            <span class="badge">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-card tilt-card">
+          <div class="skill-icon-wrapper"><i data-lucide="cpu"></i></div>
+          <h3>IoT & Hardware</h3>
+          <p>Bridging physical reality with software via microcontrollers and telemetry.</p>
+          <div class="tag-group">
+            <span class="badge">Arduino</span>
+            <span class="badge">ESP32 / WiFi</span>
+            <span class="badge">Ultrasonic Sensors</span>
+            <span class="badge">Git / GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section with Filter -->
+    <section class="section-container" id="projects">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured Creations</h2>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web & Apps</button>
+        <button class="filter-btn" data-filter="iot">IoT & Hardware</button>
+        <button class="filter-btn" data-filter="systems">Systems & Python</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card tilt-card" data-category="web">
+          <div class="project-header">
+            <span class="category-badge">Web Application</span>
+            <div class="project-links">
+              <a href="#" class="icon-btn" title="View Source"><i data-lucide="github"></i></a>
+              <a href="#" class="icon-btn" title="Live Demo"><i data-lucide="external-link"></i></a>
+            </div>
+          </div>
+          <h3>PulseFlow Analytics Dashboard</h3>
+          <p>Real-time metrics visualization with live charts, WebSocket updates, and customizable widgets.</p>
+          <div class="tag-group">
+            <span class="badge">React</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">Tailwind</span>
+            <span class="badge">Chart.js</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card tilt-card" data-category="iot">
+          <div class="project-header">
+            <span class="category-badge">IoT & Embedded</span>
+            <div class="project-links">
+              <a href="#" class="icon-btn" title="View Source"><i data-lucide="github"></i></a>
+              <a href="#" class="icon-btn" title="Demo"><i data-lucide="external-link"></i></a>
+            </div>
+          </div>
+          <h3>Smart Aqua Sentinel</h3>
+          <p>Microcontroller system with ultrasonic level sensing, automated flow alerts, and cloud telemetry.</p>
+          <div class="tag-group">
+            <span class="badge">Arduino</span>
+            <span class="badge">C++</span>
+            <span class="badge">Sensors</span>
+            <span class="badge">Telemetry</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card tilt-card" data-category="systems">
+          <div class="project-header">
+            <span class="category-badge">Systems & Python</span>
+            <div class="project-links">
+              <a href="#" class="icon-btn" title="View Source"><i data-lucide="github"></i></a>
+              <a href="#" class="icon-btn" title="Demo"><i data-lucide="external-link"></i></a>
+            </div>
+          </div>
+          <h3>NeuralVision Pipeline</h3>
+          <p>Automated visual detection pipeline with high-throughput batching and inference streaming.</p>
+          <div class="tag-group">
+            <span class="badge">Python</span>
+            <span class="badge">OpenCV</span>
+            <span class="badge">PyTorch</span>
+            <span class="badge">FastAPI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Milestones Timeline -->
+    <section class="section-container" id="timeline">
+      <div class="section-header">
+        <span class="section-tag">Milestones</span>
+        <h2 class="section-title">The Journey</h2>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content tilt-card">
+            <span class="timeline-date">2026 - Present</span>
+            <h3>Senior Systems & Full-Stack Architect</h3>
+            <p>Directing modular microservice pipelines, hardware IoT sensor integrations, and fluid user experiences.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content tilt-card">
+            <span class="timeline-date">2024 - 2025</span>
+            <h3>Open Source & Independent Engineering</h3>
+            <p>Authored high-performance utilities, contributed to developer toolchains, and constructed automated IoT monitors.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content tilt-card">
+            <span class="timeline-date">2022 - 2024</span>
+            <h3>Foundational Explorations in Computing</h3>
+            <p>Mastered data structures, algorithmic problem solving, modern web APIs, and low-level firmware engineering.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Contact Section -->
+    <section class="section-container" id="contact">
+      <div class="contact-box tilt-card">
+        <div class="section-header">
+          <span class="section-tag">Connect</span>
+          <h2 class="section-title">Let's Build Something Exceptional</h2>
+        </div>
+        <p class="contact-lead">Have a vision for a project or looking to collaborate? Drop me a message below.</p>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" required placeholder="Alex Mercer" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" required placeholder="alex@domain.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required placeholder="Hey Aariz, let's team up on..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">
+            Send Message <i data-lucide="send"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; <span id="currentYear"></span> Aariz. Crafted with precision & code.</p>
+    <a href="#hero" class="back-to-top" title="Back to top">
+      <i data-lucide="chevron-up"></i>
+    </a>
+  </footer>
+
+  <!-- Toast Notification element -->
+  <div class="toast" id="toast"></div>
+
+  <!-- External Script -->
+  <script src="script.js"></script>
+</body>
+</html>
